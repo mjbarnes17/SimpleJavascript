@@ -1,11 +1,38 @@
 // This is a 2D array that has five [with 2 values within each[] inside]
 // Each array holds a question and a answer
+// var quiz = [
+// 	["What is 2 * 2?", 4],
+// 	["How many state are in the United States?", 50],
+// 	["What is 2 + 6?", 8],
+// 	["How many legs does a spider have?", 8],
+// 	["How many years are in a decade?", 10]
+// ];
+
+// This quiz var holds an array of object literals
+// These objects literals consist of question and answer properties/Key
+// Each property holds a value
+// This is much better suited for the purpose of this program (quiz)
 var quiz = [
-	["What is 2 * 2?", 4],
-	["How many state are in the United States?", 50],
-	["What is 2 + 6?", 8],
-	["How many legs does a spider have?", 8],
-	["How many years are in a decade?", 10]
+	{
+		question : "What is 2 * 2?",
+		answer: 4
+	},
+	{
+		question : "How many state are in the United States?",
+		answer : 50
+	},
+	{
+		question : "What is 2 + 10?",
+		answer : 12
+	},
+	{
+		question : "How many legs does a spider have?",
+		answer : 8
+	},
+	{
+		question : "How many years are in a decade?",
+		answer : 10
+	}
 ];
 // Declared an empty array to hold the correctly anwsered questions
 var correctQuestions = [];
@@ -51,9 +78,16 @@ function printQuizResults(quizArr) {
 // This for loop iterates throught the quiz[] by using the .length property
 for (var i = 0; i < quiz.length; i++) {
 	// This stores the question in the [0] 1st item
-	question = quiz[i][0];
+	// question = quiz[i][0];
+
+	// This is easier to read
+	// the question var is given the quiz[] question property value
+	question = quiz[i].question;
 	// This stores the answer in the [1] 2nd item
-	answer = quiz[i][1];
+	// answer = quiz[i][1];
+
+	// the answer var is given the quiz[] answer property value
+	answer = quiz[i].answer;
 	// The response var stores the converted integer data type after the user is prompted for the input
 	response = parseInt(prompt(question));
 	// This checks to see if the response var is equal to the answer var
