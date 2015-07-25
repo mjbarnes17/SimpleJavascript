@@ -2,7 +2,7 @@
 
 By Marcus Barnes
 
-This is a simple Javascript project that prompt user to take a quiz and then display the results of the quiz along with a playlist of my favorite songs right now.
+This is a simple Javascript project that prompts the user to take a quiz by entering their responses to the question in the prompt window. When the user completes the quiz, their quiz results and my favorite songs playlist will be displayed in the html document.
 
 This project includes the following:
   - Bootstrap Framework
